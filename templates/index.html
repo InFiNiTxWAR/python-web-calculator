@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora Python</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Calculadora em Python</h1>
+
+<form method="POST">
+
+<input type="number" name="num1" placeholder="Primeiro número" required>
+<input type="number" name="num2" placeholder="Segundo número" required>
+
+<button type="submit">Somar</button>
+
+</form>
+
+{% if resultado != None %}
+<h2>Resultado: {{ resultado }}</h2>
+{% endif %}
+
+</div>
+
+</body>
+</html>
